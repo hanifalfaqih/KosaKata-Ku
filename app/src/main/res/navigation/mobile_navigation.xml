@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@+id/navigation_kosa_kata">
+
+    <fragment
+        android:id="@+id/navigation_kosa_kata"
+        android:name="id.allana.kosakata.ui.kosakata.KosaKataFragment"
+        android:label="@string/title_kosa_kata"
+        tools:layout="@layout/fragment_kosa_kata" >
+        <action
+            android:id="@+id/action_navigation_kosa_kata_to_detailKosaKataFragment"
+            app:destination="@id/detailKosaKataFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_kuis_kata"
+        android:name="id.allana.kosakata.ui.kuiskata.KuisKataFragment"
+        android:label="@string/title_kuis_kata"
+        tools:layout="@layout/fragment_kuis_kata" >
+        <action
+            android:id="@+id/action_navigation_kuis_kata_to_permainanKuisKataFragment"
+            app:destination="@id/permainanKuisKataFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_favorit_kata"
+        android:name="id.allana.kosakata.ui.favoritkata.FavoritKataFragment"
+        android:label="@string/title_penanda_kata"
+        tools:layout="@layout/fragment_favorit_kata" >
+        <action
+            android:id="@+id/action_navigation_favorit_kata_to_detailKosaKataFragment"
+            app:destination="@id/detailKosaKataFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/permainanKuisKataFragment"
+        android:name="id.allana.kosakata.ui.kuiskata.permainan.PermainanKuisKataFragment"
+        android:label="Permainan Kuis Kata"
+        tools:layout="@layout/fragment_permainan_kuis_kata">
+    </fragment>
+    <fragment
+        android:id="@+id/detailKosaKataFragment"
+        android:name="id.allana.kosakata.ui.detailkosakata.DetailKosaKataFragment"
+        android:label="Detail Kosa Kata"
+        tools:layout="@layout/fragment_detail_kosa_kata">
+        <argument
+            android:name="word"
+            app:argType="id.allana.kosakata.data.local.entity.Word" />
+    </fragment>
+
+</navigation>

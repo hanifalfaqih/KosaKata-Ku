@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">KosaKata-Ku</string>
+    <string name="title_kosa_kata">Kosa Kata</string>
+    <string name="title_kuis_kata">Kuis Kata</string>
+    <string name="title_penanda_kata">Kata Favorit</string>
+    <string name="title_detail_kosa_kata">Detail Kosa Kata</string>
+    <string name="text_add_to_favorite">Menambahkan ke favorit</string>
+    <string name="text_remove_from_favorite">Menghapus dari favorit</string>
+    <string name="text_cant_connect_internet">Tidak terhubung internet, silahkan periksa koneksi internet Anda!</string>
+    <string name="title_alert_dialog_delete">Hapus Kosa Kata</string>
+    <string name="message_alert_dialog_delete">Ingin menghapus kosa kata ini?</string>
+    <string name="text_positive_button">Ya</string>
+    <string name="text_negative_button">Tidak</string>
+    <string name="text_delete_success">Berhasil menghapus</string>
+    <string name="text_delete_failed">Gagal menghapus</string>
+    <string name="text_error_et_foreign_empty">Kosa kata harus diisi!</string>
+    <string name="text_error_et_meaning_empty">Arti kosa kata harus diisi!</string>
+    <string name="text_add_success">Kosa kata berhasil ditambahkan</string>
+    <string name="text_add_failed">Gagal menambahkan kosa kata</string>
+    <string name="title_alert_dialog_kuis_kata">Kuis Berakhir</string>
+    <string name="message_alert_dialog_kuis_kata">Ingin mengerjakan kuis lagi?</string>
+    <string name="text_correct_answer">Benar!</string>
+    <string name="text_wrong_answer">Salah!</string>
+    <string name="text_check_answer">Cek Jawaban</string>
+    <string name="text_kuis_kata_empty">Silahkan tambahkan kosa kata terlebih dahulu!</string>
+    <string name="text_next_question">Lanjut</string>
+    <string name="text_hint">Arti</string>
+    <string name="text_urutan">Urutan</string>
+    <string name="text_terbaru">Terbaru</string>
+    <string name="a_z">A - Z</string>
+    <string name="z_a">Z - A</string>
+    <string name="text_empty_kosa_kata_favorit">Kosa Kata Favorit Kosong!</string>
+    <string name="text_empty_kosa_kata">Kosa Kata Kosong!</string>
+    <string name="text_start">Mulai</string>
+    <string name="text_tebak_kuis_kata">Tebak Kuis Kata</string>
+    <string name="text_description_intro">Asah ingatanmu dari kosa kata yang sudah kamu tambahkan sebelumnya</string>
+    <string name="text_kosa_kata_baru">Kosa Kata Baru</string>
+    <string name="text_hapus_kosa_kata">Hapus Kosa Kata</string>
+    <string name="text_search_menu">Cari Kosa Kata</string>
+    <string name="text_arti">Arti</string>
+    <string name="text_tambah_kosa_kata">Tambah Kosa Kata</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

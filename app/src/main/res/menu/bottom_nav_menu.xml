@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_kosa_kata"
+        android:icon="@drawable/ic_round_abc"
+        android:title="@string/title_kosa_kata" />
+
+    <item
+        android:id="@+id/navigation_kuis_kata"
+        android:icon="@drawable/ic_baseline_checklist"
+        android:title="@string/title_kuis_kata" />
+
+    <item
+        android:id="@+id/navigation_favorit_kata"
+        android:icon="@drawable/ic_baseline_bookmarks"
+        android:title="@string/title_penanda_kata" />
+
+</menu>

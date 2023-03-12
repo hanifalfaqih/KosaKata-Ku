@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#202020</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="primaryColor">#12b39a</color>
+    <color name="primaryLightColor">#5ee6cb</color>
+    <color name="primaryDarkColor">#00826c</color>
+    <color name="secondaryColor">#ff9500</color>
+    <color name="secondaryDarkColor">#c66600</color>
+
+    <color name="colorStrokeCardView">#005441</color>
+    <color name="colorCorrect">#55a630</color>
+    <color name="colorWrong">#ef233c</color>
+
+    <color name="backgroundCardViewDetail">#f6f6f6</color>
+    <color name="backgroundCardViewList">@color/primaryDarkColor</color>
+    <color name="strokeCardView">@color/colorStrokeCardView</color>
+
+    <color name="button_disable">#1E000000</color>
+</resources>
