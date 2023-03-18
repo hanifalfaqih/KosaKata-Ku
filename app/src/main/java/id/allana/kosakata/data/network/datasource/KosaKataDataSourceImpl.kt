@@ -11,7 +11,6 @@ import com.ibm.watson.text_to_speech.v1.model.SynthesizeOptions
 import com.ibm.watson.text_to_speech.v1.util.WaveUtils
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
-import okio.Path.Companion.toPath
 import java.io.File
 
 class KosaKataDataSourceImpl : KosaKataDataSource {
@@ -37,13 +36,16 @@ class KosaKataDataSourceImpl : KosaKataDataSource {
                 .accept("audio/mp3")
                 .build()
 
-            val file = File(context.filesDir, text.toPath().toString())
+            // encode text to easier create filename
+            val fileName = text.encodeToByteArray().toString()
+
+            val file = File(context.filesDir, fileName)
             if (!file.exists()) {
                 // If the file doesn't exist, generate the audio file and save it to the cache
                 val inputStream = textToSpeech.synthesize(synthesizeOptions).execute().result
                 val audio = WaveUtils.reWriteWaveHeader(inputStream)
 
-                context.openFileOutput(text, Context.MODE_PRIVATE).use { fos ->
+                context.openFileOutput(fileName, Context.MODE_PRIVATE).use { fos ->
                     val buffer = ByteArray(1024)
                     var length: Int
                     while ((audio.read(buffer).also { length = it }) > 0) {
