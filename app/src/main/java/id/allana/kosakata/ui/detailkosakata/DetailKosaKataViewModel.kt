@@ -63,4 +63,9 @@ class DetailKosaKataViewModel(private val repository: DetailKosaKataRepository) 
     }
 
     override fun deleteWordLiveData(): MutableLiveData<Resource<Number>> = deleteWordResultLiveData
+    override fun deleteCacheFile() {
+        viewModelScope.launch(Dispatchers.IO) {
+            repository.deleteCacheFile()
+        }
+    }
 }

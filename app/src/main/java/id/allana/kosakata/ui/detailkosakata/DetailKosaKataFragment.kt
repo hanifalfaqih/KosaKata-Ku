@@ -63,7 +63,7 @@ class DetailKosaKataFragment : BaseFragment<FragmentDetailKosaKataBinding, Detai
             }
         }
 
-        //handleOnBackPressed()
+
     }
 
     override fun initViewModel(): DetailKosaKataViewModel {
@@ -138,6 +138,7 @@ class DetailKosaKataFragment : BaseFragment<FragmentDetailKosaKataBinding, Detai
             setMessage(getString(R.string.message_alert_dialog_delete))
                 .setPositiveButton(getString(R.string.text_positive_button)) { _, _ ->
                     word?.let { getViewModel().deleteWord(it) }
+                    getViewModel().deleteCacheFile()
                 }
                 .setNegativeButton(getString(R.string.text_negative_button)) { dialog, _ ->
                     dialog.dismiss()

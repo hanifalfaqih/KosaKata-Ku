@@ -7,5 +7,6 @@ interface KosaKataDataSource {
 
     suspend fun synthesizeTextToSpeech(text: String, context: Context)
     suspend fun playSound(file: File, context: Context)
+    suspend fun deleteCacheFiles()
 
 }

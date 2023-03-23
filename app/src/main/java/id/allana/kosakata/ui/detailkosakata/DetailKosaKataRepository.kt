@@ -20,6 +20,10 @@ class DetailKosaKataRepository(private val wordDataSource: WordDataSource, priva
         return wordDataSource.deleteWord(word)
     }
 
+    override suspend fun deleteCacheFile() {
+        kosaKataDataSource.deleteCacheFiles()
+    }
+
     override fun logResponse(msg: String?) {
         Log.i("REPOSITORY", "KosaKataRepository created!")
     }

@@ -28,6 +28,8 @@ class KosaKataDataSourceImpl : KosaKataDataSource {
         serviceUrl = URL
     }
 
+    private lateinit var fileToDelete: File
+
     override suspend fun synthesizeTextToSpeech(text: String, context: Context) {
         withContext(Dispatchers.IO) {
             val synthesizeOptions = SynthesizeOptions.Builder()
@@ -54,6 +56,10 @@ class KosaKataDataSourceImpl : KosaKataDataSource {
                 }
             }
 
+            // Delete cache files when data delete from room
+            // deleteCacheFile()
+            fileToDelete = file
+
             // Play the sound
             playSound(file, context)
         }
@@ -75,4 +81,10 @@ class KosaKataDataSourceImpl : KosaKataDataSource {
             mediaPlayer.setOnPreparedListener { mp -> mp.start() }
         }
     }
+
+    override suspend fun deleteCacheFiles() {
+        fileToDelete.delete()
+    }
+
+
 }

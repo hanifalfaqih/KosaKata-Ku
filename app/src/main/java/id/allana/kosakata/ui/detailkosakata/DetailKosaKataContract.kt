@@ -22,11 +22,13 @@ interface DetailKosaKataContract {
         fun updateWord(word: Word)
         fun deleteWord(word: Word)
         fun deleteWordLiveData(): MutableLiveData<Resource<Number>>
+        fun deleteCacheFile()
     }
 
     interface Repository: BaseContract.BaseRepository {
         suspend fun synthesizeTextToSpeech(text: String, context: Context)
         suspend fun updateWord(word: Word): Int
         suspend fun deleteWord(word: Word): Int
+        suspend fun deleteCacheFile()
     }
 }
